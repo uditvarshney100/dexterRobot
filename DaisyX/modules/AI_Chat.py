@@ -31,7 +31,7 @@ from DaisyX import BOT_ID
 from DaisyX.db.mongo_helpers.aichat import add_chat, get_session, remove_chat
 from DaisyX.function.inlinehelper import arq
 from DaisyX.function.pluginhelpers import admins_only, edit_or_reply
-from DaisyX.services.pyrogram import pbot as daisyx
+from DaisyX.services.pyrogram import pbot as DexteRx
 
 translator = google_translator()
 
@@ -60,17 +60,17 @@ async def fetch(url):
         return
 
 
-daisy_chats = []
+DexteR_chats = []
 en_chats = []
 # AI Chat (C) 2020-2021 by @InukaAsith
 
 
-@daisyx.on_message(
+@DexteRx.on_message(
     filters.command("chatbot") & ~filters.edited & ~filters.bot & ~filters.private
 )
 @admins_only
 async def hmm(_, message):
-    global daisy_chats
+    global DexteR_chats
     if len(message.command) != 2:
         await message.reply_text(
             "I only recognize `/chatbot on` and /chatbot `off only`"
@@ -111,7 +111,7 @@ async def hmm(_, message):
         )
 
 
-@daisyx.on_message(
+@DexteRx.on_message(
     filters.text
     & filters.reply
     & ~filters.bot
@@ -137,7 +137,7 @@ async def hmm(client, message):
         message.continue_propagation()
     if chat_id in en_chats:
         test = msg
-        test = test.replace("daisy", "Aco")
+        test = test.replace("DexteR", "Aco")
         test = test.replace("Daisy", "Aco")
         response = await lunaQuery(
             test, message.from_user.id if message.from_user else 0
@@ -147,7 +147,7 @@ async def hmm(client, message):
 
         pro = response
         try:
-            await daisyx.send_chat_action(message.chat.id, "typing")
+            await DexteRx.send_chat_action(message.chat.id, "typing")
             await message.reply_text(pro)
         except CFError:
             return
@@ -195,7 +195,7 @@ async def hmm(client, message):
                 return
         # test = emoji.demojize(test.strip())
 
-        test = test.replace("daisy", "Aco")
+        test = test.replace("DexteR", "Aco")
         test = test.replace("Daisy", "Aco")
         response = await lunaQuery(
             test, message.from_user.id if message.from_user else 0
@@ -212,13 +212,13 @@ async def hmm(client, message):
             except:
                 return
         try:
-            await daisyx.send_chat_action(message.chat.id, "typing")
+            await DexteRx.send_chat_action(message.chat.id, "typing")
             await message.reply_text(pro)
         except CFError:
             return
 
 
-@daisyx.on_message(
+@DexteRx.on_message(
     filters.text & filters.private & ~filters.edited & filters.reply & ~filters.bot
 )
 async def inuka(client, message):
@@ -269,7 +269,7 @@ async def inuka(client, message):
     # test = emoji.demojize(test.strip())
 
     # Kang with the credits bitches @InukaASiTH
-    test = test.replace("daisy", "Aco")
+    test = test.replace("DexteR", "Aco")
     test = test.replace("Daisy", "Aco")
 
     response = await lunaQuery(test, message.from_user.id if message.from_user else 0)
@@ -281,14 +281,14 @@ async def inuka(client, message):
         pro = translator.translate(pro, dest=lan)
         pro = pro.text
     try:
-        await daisyx.send_chat_action(message.chat.id, "typing")
+        await DexteRx.send_chat_action(message.chat.id, "typing")
         await message.reply_text(pro)
     except CFError:
         return
 
 
-@daisyx.on_message(
-    filters.regex("Daisy|daisy|DaisyX|daisyx|Daisyx")
+@DexteRx.on_message(
+    filters.regex("Daisy|DexteR|DaisyX|DexteRx|Daisyx")
     & ~filters.bot
     & ~filters.via_bot
     & ~filters.forwarded
@@ -343,7 +343,7 @@ async def inuka(client, message):
 
     # test = emoji.demojize(test.strip())
 
-    test = test.replace("daisy", "Aco")
+    test = test.replace("DexteR", "Aco")
     test = test.replace("Daisy", "Aco")
     response = await lunaQuery(test, message.from_user.id if message.from_user else 0)
     response = response.replace("Aco", "Daisy")
@@ -357,7 +357,7 @@ async def inuka(client, message):
         except Exception:
             return
     try:
-        await daisyx.send_chat_action(message.chat.id, "typing")
+        await DexteRx.send_chat_action(message.chat.id, "typing")
         await message.reply_text(pro)
     except CFError:
         return
@@ -372,7 +372,7 @@ DAISY AI 3.0 IS THE ONLY AI SYSTEM WHICH CAN DETECT & REPLY UPTO 200 LANGUAGES
  
  
 <b> Assistant </b>
- - /ask [question]: Ask question from daisy
+ - /ask [question]: Ask question from DexteR
  - /ask [reply to voice note]: Get voice reply
  
 """

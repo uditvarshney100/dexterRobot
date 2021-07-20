@@ -31,7 +31,7 @@ def get_reason(id):
 
 client = MongoClient()
 client = MongoClient(MONGO_DB_URI)
-db = client["daisyx"]
+db = client["DexteRx"]
 gbanned = db.gban
 
 edit_time = 3

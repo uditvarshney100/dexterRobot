@@ -37,7 +37,7 @@ from DaisyX.services.pyrogram import pbot
 )
 @admins_only
 async def hmm(_, message):
-    global daisy_chats
+    global DexteR_chats
     try:
         user_id = message.from_user.id
     except:
