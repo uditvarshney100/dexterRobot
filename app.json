@@ -10,7 +10,7 @@
   ],
   "repository": "https://github.com/TeamDaisyX/Daisy-x",
   "website": "DexteRproject.studio",
-  "success_url": "t.me/DaisyXUpdates",
+  "success_url": "t.me/DexterRobotNews",
   "buildpacks": [
    {
      "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest"
