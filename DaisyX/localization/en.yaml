@@ -197,7 +197,7 @@ STRINGS:
     back: "🏃‍♂️ Back"
 
     # /help
-    help_header: "Hi Boss! I'm <bDexteR</b>. An anime themed super powerful group management bot with many handy tools. So why are you waiting. Let me to assist you"
+    help_header: "Hi Boss! I'm <b>DexteR</b>. An anime themed super powerful group management bot with many handy tools. So why are you waiting. Let me to assist you"
     click_btn: Click here
 
   disable:
