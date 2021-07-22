@@ -93,7 +93,7 @@ async def get_start_func(message, strings, edit=False):
     buttons.add(
         InlineKeyboardButton(
             "👸🏼 Add DexteR to your group",
-            url=f"https://telegram.me/DexteRxbot?startgroup=true",
+            url=f"https://telegram.me/DexterRobot?startgroup=true",
         )
     )
     # Handle error when user click the button 2 or more times simultaneously
